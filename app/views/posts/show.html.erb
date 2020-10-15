@@ -1,3 +1,10 @@
 <h1><%= @post.title %></h1>
+<h3><%= link_to @post.blogger.name, blogger_path(@post.blogger)%></h3>
 <p><%= @post.content.split(" ").join(" ")%></p>
-<p>Likes: <%= @post.likes %></p>
+<h3><%= link_to @post.destination.name, destination_path(@post.destination)%></h3>
+<p>Likes: <%= @post.likes%></p>
+
+<button id="btn"> Like <span id="btn-counter"></span></button>
+    
+
+

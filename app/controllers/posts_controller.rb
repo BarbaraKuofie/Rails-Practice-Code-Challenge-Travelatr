@@ -17,10 +17,15 @@ class PostsController < ApplicationController
         end 
      end 
 
-
      def show
         @post = Post.find(params[:id])
     end
+
+    private
+
+    # def update_like
+    #     @post.update_attribute :like, params[:count] + 1
+    # end
 
 
      def post_params 
