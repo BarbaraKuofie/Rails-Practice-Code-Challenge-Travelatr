@@ -14,6 +14,4 @@ class Blogger < ApplicationRecord
        self.posts.sort_by{|post|post.likes}.last.title 
     end 
 
-
-
 end
