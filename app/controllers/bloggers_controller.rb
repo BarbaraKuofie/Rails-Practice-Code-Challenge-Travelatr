@@ -18,6 +18,10 @@ class BloggersController < ApplicationController
         end
     end
 
+    def show 
+        @blogger = Blogger.find(params[:id])
+    end 
+
     private
 
     def blogger_params
