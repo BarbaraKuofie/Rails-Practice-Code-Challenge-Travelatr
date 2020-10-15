@@ -1,0 +1,29 @@
+<h1>NEW FORM</h1>
+
+
+<%= form_for (@post) do |f|%>
+<% if @post.errors.any? %>
+<div id = "error_explanation">
+    <h3>
+        <%= pluralize(@post.errors.count, "error")%>
+            Fix errors before saving post:
+    </h3>
+    <ul>
+        <% @post.errors.full_messages.each do |message|%>
+            <li><%=message%></li>
+        <%end%>
+    </ul>
+  </div>
+  <%end%>
+        
+    <label>Title:</label><br>
+    <%=f.text_field :title%><br>
+    By: <%= f.collection_select :blogger, Blogger.all, :name, :name %><br>
+    Destination:<%= f.collection_select :destination, Destination.all, :name, :name %><br>
+    <label>Content:</label><br>
+    <%=f.text_area :content%><br>
+
+
+    <%=f.submit%><br>
+
+<%end%>

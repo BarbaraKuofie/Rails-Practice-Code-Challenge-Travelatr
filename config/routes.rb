@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :bloggers, only: [:new, :create, :show]
   resources :destinations, only: [:show]
-
+  resources :posts, only: [:index, :new, :show, :create, :edit, :update]
   
 end
 

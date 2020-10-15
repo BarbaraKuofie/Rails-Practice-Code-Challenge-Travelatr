@@ -11,7 +11,7 @@ class Blogger < ApplicationRecord
     end 
 
     def most_liked_post 
-       self.posts.sort_by{|post|post.likes}.last.title 
+       self.posts.sort_by{|post|post.likes}.last
     end 
 
 end

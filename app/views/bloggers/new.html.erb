@@ -1,4 +1,4 @@
-<h1>NEW BLOG </h1>
+<h1>NEW BLOGGER </h1>
 
 
 <%= form_for (@blogger) do |f|%>
@@ -6,7 +6,7 @@
 <div id = "error_explanation">
     <h3>
         <%= pluralize(@blogger.errors.count, "error")%>
-            Fix errors befor saving blogger:
+            Fix errors before saving blogger:
     </h3>
     <ul>
         <% @blogger.errors.full_messages.each do |message|%>
