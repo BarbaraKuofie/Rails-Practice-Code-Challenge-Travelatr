@@ -1,0 +1,28 @@
+<h1>NEW BLOG </h1>
+
+
+<%= form_for (@blogger) do |f|%>
+<% if @blogger.errors.any? %>
+<div id = "error_explanation">
+    <h3>
+        <%= pluralize(@blogger.errors.count, "error")%>
+            Fix errors befor saving blogger:
+    </h3>
+    <ul>
+        <% @blogger.errors.full_messages.each do |message|%>
+            <li><%=message%></li>
+        <%end%>
+    </ul>
+  </div>
+  <%end%>
+
+    <label>Name:</label><br>
+    <%=f.text_field :name%><br>
+    <label>Age:</label><br>
+    <%=f.text_field :age%><br>
+    <label>Bio:</label><br>
+    <%=f.text_area :bio%><br>
+
+    <%=f.submit%><br>
+
+<%end%>
