@@ -14,4 +14,10 @@ class Blogger < ApplicationRecord
        self.posts.sort_by{|post|post.likes}.last
     end 
 
+    def popular_destination
+       blogger = Post.all.select{|post|post.blogger_id == self}
+       blog_count = Destination.all.select{|destination|destination.posts.blogger}.count
+        Destination.all.sort_by{|destination|destination.blog_count}.last(5)
+    end 
+
 end

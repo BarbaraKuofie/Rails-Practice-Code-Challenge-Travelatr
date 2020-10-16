@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :bloggers, only: [:new, :create, :show]
   resources :destinations, only: [:show]
   resources :posts, only: [:index, :new, :show, :create, :edit, :update]
-  
+  post "/posts/:id/like", to: "posts#add_like", as: "like"
 end
 
 
