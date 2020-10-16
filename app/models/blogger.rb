@@ -14,19 +14,19 @@ class Blogger < ApplicationRecord
        self.posts.sort_by{|post|post.likes}.last
     end 
 
-    def popular_destination
-       blogger = Post.all.select{|post|post.blogger_id == self}
-       blog_count = Destination.all.select{|destination|destination.posts.blogger}.count
-        Destination.all.sort_by{|destination|destination.blog_count}.last(5)
-    end 
-    def top_five
-        sum = 0
-        blogposts = Post.all.where(blogger_id: self.id)
-        blogposts.each do |blogpost|
-        if blogpost.destination_id !== blogpost.destination_id
+    # def popular_destination
+    #    blogger = Post.all.select{|post|post.blogger_id == self}
+    #    blog_count = Destination.all.select{|destination|destination.posts.blogger}.count
+    #     Destination.all.sort_by{|destination|destination.blog_count}.last(5)
+    # end 
+    # def top_five
+    #     sum = 0
+    #     blogposts = Post.all.where(blogger_id: self.id)
+    #     blogposts.each do |blogpost|
+    #     if blogpost.destination_id !== blogpost.destination_id
             
-        end
-        sum.last(5)
-    end
+    #     end
+    #     sum.last(5)
+    # end
 
 end

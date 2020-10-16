@@ -2,4 +2,5 @@
 <h3><%= link_to @post.blogger.name, blogger_path(@post.blogger)%></h3>
 <p><%= @post.content.split(" ").join(" ")%></p>
 <p>Likes: <%= @post.likes %></p>
-<%= link_to "+", like_path(@post), method: :post%>
+
+<button><%= link_to "LIKE", like_path(@post), method: :post%></button>

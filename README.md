@@ -27,7 +27,7 @@ Blogger:
 	- **BONUS** A list of that user's top 5 most written about destinations (the destinations with the most posts)
 
 Destination:
-
+lik
 1. Users should be able to see a destination profile page. On this page, a user should see:
 	- The most recent 5 posts written about this destination
 	- A link to a featured post (this destination's post with the most likes)

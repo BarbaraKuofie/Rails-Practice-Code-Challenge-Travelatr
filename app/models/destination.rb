@@ -11,7 +11,7 @@ class Destination < ApplicationRecord
     def most_liked_post 
         self.posts.sort_by{|post|post.likes}.last.title 
      end 
-w
+     
      def average_blogger_age
        blogger_age = self.bloggers.uniq.map{|blogger| blogger.age}.sum 
        blogger_age / blogger_age.size
